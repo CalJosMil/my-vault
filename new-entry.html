@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Entry - My ITOL Vault</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <a href="index.html" class="logo">My ITOL Vault</a>
+    <div class="header-right">
+      <nav>
+        <a href="vault.html" class="nav-link">Archive</a>
+        <a href="new-entry.html" class="nav-link active">New Entry</a>
+      </nav>
+      <a href="vault.html" class="profile-icon material-symbols-outlined" aria-label="My Vault">account_circle</a>
+    </div>
+  </header>
+
+  <main class="editor-page">
+    <form class="editor-form" id="entry-form">
+      <div class="editor-heading">
+        <p class="date">Tuesday, November 3 2026</p>
+        <input type="text" id="entry-title" class="title-input" placeholder="Untitled Reflection" aria-label="Title">
+      </div>
+
+      <div class="mood-buttons">
+        <button type="button" class="mood-button selected">
+          <span class="material-symbols-outlined">mood</span> Thoughtful
+        </button>
+        <button type="button" class="mood-button">
+          <span class="material-symbols-outlined">add</span> Add Tag
+        </button>
+      </div>
+
+      <div class="writing-area">
+        <div class="tip">
+          <p class="tip-title">Depth insight</p>
+          <p class="tip-text">Write without judgment. The vault remembers only what you choose to ink.</p>
+        </div>
+        <textarea id="entry-body" class="body-input" placeholder="Begin your reflection..." aria-label="Reflection"></textarea>
+      </div>
+
+      <div class="toolbar">
+        <div>
+          <button type="button" class="tool-button">
+            <span class="material-symbols-outlined">image</span> Insert Memory
+          </button>
+          <button type="button" class="tool-button">
+            <span class="material-symbols-outlined">lock</span> Private
+          </button>
+        </div>
+        <div>
+          <a href="index.html">Discard</a>
+          <button type="submit" id="save-entry" class="button save-button">Save Entry</button>
+        </div>
+      </div>
+    </form>
+
+    <div class="editor-side"></div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 My ITOL Vault. Designed for reflection.</p>
+    <div>
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="vault.html">Archive</a>
+    </div>
+  </footer>
+</body>
+</html>

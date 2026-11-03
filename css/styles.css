@@ -1,0 +1,483 @@
+/* ===== Colours used across the site ===== */
+:root {
+  --background: #f8f8f8;
+  --white: #ffffff;
+  --light-grey: #f0f0f0;
+  --text: #111111;
+  --text-grey: #666666;
+  --placeholder: #cccccc;
+}
+
+/* ===== Basics ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--background);
+  color: var(--text);
+  font-family: "Inter", Arial, sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+h1,
+h2 {
+  line-height: 1.3;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ===== Header ===== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+}
+
+.logo {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+nav {
+  display: flex;
+  gap: 32px;
+}
+
+.nav-link {
+  color: var(--text-grey);
+  padding: 4px 0;
+}
+
+.nav-link.active {
+  color: var(--text);
+  font-weight: 600;
+  border-bottom: 2px solid var(--text);
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.button {
+  background-color: var(--text);
+  color: var(--white);
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.profile-icon {
+  font-size: 30px;
+}
+
+/* ===== Page title section ===== */
+.intro {
+  padding: 64px 0 48px;
+}
+
+.intro h1 {
+  font-size: 48px;
+  font-weight: 800;
+}
+
+.intro p {
+  max-width: 500px;
+  margin-top: 16px;
+  color: var(--text-grey);
+  font-size: 18px;
+}
+
+/* ===== Things shared by cards and rows ===== */
+.date {
+  color: var(--text-grey);
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.tag {
+  background-color: var(--light-grey);
+  color: var(--text-grey);
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+}
+
+/* ===== Home page grid ===== */
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 24px;
+}
+
+/* A normal card takes 1 of the 3 columns */
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background-color: var(--light-grey);
+  padding: 32px;
+  border-radius: 8px;
+}
+
+.card h2 {
+  font-size: 18px;
+}
+
+.card p {
+  font-size: 14px;
+}
+
+.card .date {
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.card .tags {
+  margin-top: auto; /* pushes the tags to the bottom of the card */
+}
+
+.card .tag {
+  background-color: var(--white);
+}
+
+/* A wide card takes 2 of the 3 columns */
+.card.wide {
+  grid-column: span 2;
+  background-color: var(--white);
+  padding: 40px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.card.wide h2 {
+  font-size: 28px;
+}
+
+.card.wide p {
+  font-size: 16px;
+}
+
+.card.wide .date {
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* A full card takes all 3 columns */
+.card.full {
+  grid-column: span 3;
+}
+
+/* ===== "Feeling inspired?" box ===== */
+.inspire-box {
+  margin-top: 24px;
+  padding: 48px;
+  border: 2px dashed #dddddd;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.inspire-icon {
+  background-color: var(--light-grey);
+  color: var(--text-grey);
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.inspire-box h2 {
+  margin-top: 16px;
+  font-size: 18px;
+}
+
+.inspire-box p {
+  color: var(--text-grey);
+  font-size: 14px;
+}
+
+.underline-link {
+  display: inline-block;
+  margin-top: 16px;
+  font-weight: 600;
+  border-bottom: 2px solid var(--text);
+}
+
+/* ===== Vault page rows ===== */
+.entry-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.entry-row {
+  background-color: var(--white);
+  padding: 32px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.row-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.row-top div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+
+.more-button {
+  background: none;
+  border: none;
+  color: var(--text-grey);
+  cursor: pointer;
+}
+
+.entry-row h2 {
+  margin-top: 12px;
+  font-size: 24px;
+}
+
+.entry-row p {
+  margin-top: 8px;
+  font-size: 16px;
+}
+
+/* ===== New entry page ===== */
+.editor-page {
+  display: flex;
+}
+
+.editor-form {
+  flex: 1;
+  padding: 64px 48px 48px;
+}
+
+/* The heading, tags and toolbar line up with the text box,
+   which starts 248px in (200px note + 48px gap) */
+.editor-heading,
+.mood-buttons,
+.toolbar {
+  margin-left: 248px;
+}
+
+.editor-heading {
+  border-left: 2px solid var(--text);
+  padding-left: 24px;
+  margin-left: 224px; /* 248px minus the 24px padding */
+}
+
+.editor-heading .date {
+  letter-spacing: 4px;
+}
+
+.title-input {
+  width: 100%;
+  border: none;
+  background: none;
+  font-family: inherit;
+  font-size: 48px;
+  font-weight: 800;
+}
+
+.title-input::placeholder {
+  color: var(--placeholder);
+}
+
+.mood-buttons {
+  display: flex;
+  gap: 8px;
+  margin-top: 32px;
+}
+
+.mood-button {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background-color: var(--light-grey);
+  color: var(--text-grey);
+  padding: 4px 12px;
+  border: none;
+  border-radius: 20px;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.mood-button.selected {
+  background-color: #dddddd;
+  color: var(--text);
+}
+
+.mood-button .material-symbols-outlined {
+  font-size: 16px;
+}
+
+.writing-area {
+  display: flex;
+  gap: 48px;
+  margin-top: 32px;
+}
+
+.tip {
+  width: 200px;
+  color: var(--placeholder);
+  font-size: 12px;
+  text-align: right;
+}
+
+.tip-title {
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.tip-text {
+  margin-top: 8px;
+  font-style: italic;
+}
+
+.body-input {
+  flex: 1;
+  height: 500px;
+  border: none;
+  background: none;
+  font-family: inherit;
+  font-size: 18px;
+  resize: none;
+}
+
+.body-input::placeholder {
+  color: var(--placeholder);
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 24px;
+}
+
+.toolbar div {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.toolbar a {
+  font-weight: 600;
+}
+
+.tool-button {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: none;
+  border: none;
+  color: var(--text-grey);
+  font-family: inherit;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.save-button {
+  padding: 12px 40px;
+  font-size: 16px;
+}
+
+.editor-side {
+  width: 300px;
+  background-color: var(--light-grey);
+}
+
+/* ===== Footer ===== */
+footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 64px;
+  padding: 32px;
+  color: #999999;
+  font-size: 14px;
+}
+
+footer div {
+  display: flex;
+  gap: 32px;
+}
+
+/* ===== Phones and small screens ===== */
+@media (max-width: 800px) {
+  header {
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 16px;
+  }
+
+  .intro h1,
+  .title-input {
+    font-size: 36px;
+  }
+
+  /* Every card goes full width, one per row */
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card.wide,
+  .card.full {
+    grid-column: span 1;
+  }
+
+  /* The editor loses its side note and grey panel */
+  .editor-form {
+    padding: 32px 16px;
+  }
+
+  .editor-heading,
+  .mood-buttons,
+  .toolbar {
+    margin-left: 0;
+  }
+
+  .tip,
+  .editor-side {
+    display: none;
+  }
+
+  .toolbar {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 8px;
+    padding: 24px 16px;
+  }
+}
